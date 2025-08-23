@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NIKHIL • .NET Developer Portfolio</title>
+  <meta name="description" content=".NET developer (1.6 years). ASP.NET Core, EF Core, SQL, Web APIs." />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root { --bg:#0b1220; --card:#121a2b; --text:#e7ecf4; --muted:#9fb0d1; --accent:#84d0ff; }
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,Segoe UI,Roboto,Inter,Arial;background:var(--bg);color:var(--text)}
+    .wrap{max-width:1024px;margin:0 auto;padding:24px}
+    header{display:flex;justify-content:space-between;align-items:center;gap:16px}
+    nav a{color:var(--muted);text-decoration:none;margin:0 8px} nav a:hover{color:var(--accent)}
+    .hero{padding:56px 0}
+    h1{font-size:40px;margin:0 0 8px} h2{margin-top:40px}
+    .pill{display:inline-block;background:rgba(132,208,255,.12);border:1px solid rgba(132,208,255,.35);color:var(--accent);padding:6px 10px;border-radius:999px;font-size:12px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+    .card{background:var(--card);border:1px solid #1e2940;border-radius:16px;padding:16px}
+    .card h3{margin:0 0 8px}
+    .skills span{display:inline-block;margin:6px 6px 0 0;padding:6px 10px;border-radius:999px;background:#0e1730;color:#cfe3ff;border:1px solid #203258;font-size:12px}
+    footer{margin:56px 0 16px;color:var(--muted);font-size:14px}
+    a.btn{display:inline-block;margin-top:10px;padding:8px 12px;border:1px solid #28406a;border-radius:10px;color:#cfe3ff;text-decoration:none}
+    a.btn:hover{border-color:#84d0ff;color:#84d0ff}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div><strong>Nikhil</strong> • .NET Developer</div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="Nikhil_Resume.pdf">Resume</a>
+        <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <span class="pill">ASP.NET Core • EF Core • SQL</span>
+      <h1>Building clean Web APIs & data-driven features.</h1>
+      <p>I’m a .NET developer (1.6 years) focused on ASP.NET Core Web API, EF Core, and performance-friendly SQL. Recently: multi-tenant DB routing by AppId, SP-driven analytics, and API-first refactors.</p>
+      <a class="btn" href="#projects">See my work ↓</a>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>ULB Dashboard API</h3>
+          <p>Dynamic child-DB selection by <em>AppId</em>, Repository Pattern, EF Core + <code>FromSqlRaw</code>, Swagger docs.</p>
+          <p><strong>Highlights:</strong> JWT auth • caching • health checks</p>
+          <a class="btn" href="https://github.com/YOUR_GITHUB/ulb-dashboard-api">Code ↗</a>
+        </article>
+        <article class="card">
+          <h3>Attendance Summary (SP)</h3>
+          <p>SP consolidating scan times, collection counts, and idle-time metrics for user-day summaries.</p>
+          <a class="btn" href="https://github.com/YOUR_GITHUB/employee-summary-sp">Code ↗</a>
+        </article>
+        <article class="card">
+          <h3>Garbage Collection Insights</h3>
+          <p>API + queries to detect duplicate SSId records with filters by date/type; exports and charts.</p>
+          <a class="btn" href="https://github.com/YOUR_GITHUB/gc-insights">Code ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <div>
+        <span>C# / .NET 6+</span><span>ASP.NET Core Web API</span><span>EF Core</span>
+        <span>LINQ</span><span>SQL Server / SPs</span><span>REST</span><span>JWT</span>
+        <span>Git/GitHub</span><span>Azure basics</span><span>Postman/Swagger</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a> • Indore, IN</p>
+    </section>
+
+    <footer>© <span id="y"></span> Nikhil. Built with vanilla HTML/CSS. </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
