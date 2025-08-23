@@ -3,81 +3,114 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nikhil Barapatre • .NET Developer Portfolio</title>
+  <title>NIKHIL BARAPATRE • .NET Developer Portfolio</title>
   <meta name="description" content=".NET developer (1.6 years). ASP.NET Core, EF Core, SQL, Web APIs." />
   <link rel="icon" href="favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    /* 🎨 Color Palette */
     :root {
-      --bg: linear-gradient(135deg, #0b1220, #121a2b);
-      --card: #151f33;
-      --text: #e7ecf4;
-      --muted: #9fb0d1;
-      --accent: #3ab4ff;
+      --bg: #0a0118;
+      --bg-gradient: linear-gradient(135deg, #1e0036, #2c006b, #45009d);
+      --card: #1a0a30;
+      --text: #f5f0ff;
+      --muted: #b8a6d9;
+      --accent: #a46bff;
+      --accent2: #d08bff;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:'Inter', sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.6;
+
+    /* 🌐 Base */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", system-ui, Segoe UI, Roboto, Arial;
+      background: var(--bg-gradient);
+      color: var(--text);
+      line-height: 1.6;
     }
-    .wrap{max-width:1100px;margin:0 auto;padding:24px}
-    
-    /* Header */
-    header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0}
-    header strong{font-size:20px}
-    nav a{color:var(--muted);text-decoration:none;margin:0 10px;font-weight:500;transition:.2s}
-    nav a:hover{color:var(--accent)}
-    
-    /* Hero */
-    .hero{padding:80px 0;text-align:center}
-    .hero h1{font-size:48px;margin:16px 0;font-weight:700}
-    .hero p{max-width:650px;margin:0 auto;color:var(--muted)}
-    .pill{display:inline-block;background:rgba(58,180,255,.1);border:1px solid rgba(58,180,255,.35);
-      color:var(--accent);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600}
-    
-    a.btn{
-      display:inline-block;margin-top:20px;padding:12px 20px;
-      border:1px solid #28406a;border-radius:10px;
-      color:var(--text);text-decoration:none;font-weight:600;transition:.3s
+    a { text-decoration: none; }
+
+    /* 📦 Layout */
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px; }
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1);
     }
-    a.btn:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
-    
-    /* Section */
-    section{margin:80px 0}
-    h2{text-align:center;font-size:28px;margin-bottom:32px;font-weight:700}
-    
-    /* Projects Grid */
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
-    .card{
-      background:var(--card);
-      border:1px solid #1e2940;
-      border-radius:16px;
-      padding:20px;
-      transition:.3s;
+    header strong { font-size: 18px; letter-spacing: 1px; }
+    nav a {
+      margin: 0 12px; font-size: 15px; color: var(--muted);
+      transition: color 0.3s;
     }
-    .card:hover{transform:translateY(-5px);border-color:var(--accent)}
-    .card h3{margin:0 0 12px;font-size:20px}
-    .card p{color:var(--muted);font-size:15px}
-    
-    /* Skills */
-    .skills span{
-      display:inline-block;margin:6px;padding:8px 14px;border-radius:999px;
-      background:#0e1730;color:#cfe3ff;border:1px solid #203258;font-size:13px
+    nav a:hover { color: var(--accent); }
+
+    /* ✨ Hero */
+    .hero {
+      text-align: center; padding: 80px 20px;
     }
-    
-    /* Contact */
-    #contact p{text-align:center;font-size:16px}
-    
-    /* Footer */
-    footer{text-align:center;margin:56px 0 16px;color:var(--muted);font-size:14px}
+    .pill {
+      display: inline-block; background: rgba(164,107,255,0.1);
+      border: 1px solid rgba(208,139,255,0.3);
+      color: var(--accent2);
+      padding: 6px 14px; border-radius: 999px; font-size: 13px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 42px; margin: 12px 0;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero p { max-width: 650px; margin: 0 auto; color: var(--muted); font-size: 17px; }
+
+    /* 🗂 Projects */
+    h2 { font-size: 28px; margin: 60px 0 20px; text-align: center; }
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+      gap: 24px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 18px; padding: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 22px rgba(164,107,255,0.4);
+    }
+    .card h3 { margin-bottom: 10px; color: var(--accent2); }
+    .card p { font-size: 15px; color: var(--muted); }
+
+    /* 🔑 Skills */
+    .skills div { text-align: center; }
+    .skills span {
+      display: inline-block; margin: 8px; padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(164,107,255,0.4);
+      font-size: 13px; color: var(--text);
+    }
+
+    /* 📩 Contact */
+    #contact p { text-align: center; font-size: 16px; }
+
+    /* 🔘 Buttons */
+    a.btn {
+      display: inline-block; margin-top: 14px; padding: 10px 18px;
+      border: 1px solid var(--accent); border-radius: 12px;
+      color: var(--accent); font-weight: 500;
+      transition: all 0.3s;
+    }
+    a.btn:hover {
+      background: var(--accent); color: #fff; border-color: var(--accent);
+    }
+
+    /* ⚡ Footer */
+    footer {
+      margin: 60px 0 20px; text-align: center;
+      color: var(--muted); font-size: 14px;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <!-- Header -->
     <header>
       <div><strong>Nikhil Barapatre</strong> • .NET Developer</div>
       <nav>
@@ -90,59 +123,50 @@
       </nav>
     </header>
 
-    <!-- Hero -->
     <section class="hero">
       <span class="pill">ASP.NET Core • EF Core • SQL</span>
-      <h1>Building scalable Web APIs & data-driven solutions</h1>
-      <p>I’m a .NET developer (1.6 years) skilled in ASP.NET Core, EF Core, and SQL Server.  
-      Focused on designing clean APIs, optimizing database queries, and implementing real-world solutions.</p>
-      <a class="btn" href="#projects">🚀 See My Work</a>
+      <h1>Building clean Web APIs & data-driven solutions.</h1>
+      <p>I’m a .NET developer (1.6 years) specialized in ASP.NET Core Web API, EF Core, and SQL optimization. Recently: multi-tenant DB routing, SP-driven analytics, and API-first refactors.</p>
+      <a class="btn" href="#projects">See my work ↓</a>
     </section>
 
-    <!-- Projects -->
     <section id="projects">
       <h2>Featured Projects</h2>
       <div class="grid">
         <article class="card">
           <h3>ULB Dashboard API</h3>
-          <p>Multi-tenant DB routing with Repository Pattern, EF Core + FromSqlRaw, Swagger docs.</p>
-          <p><strong>Highlights:</strong> JWT auth • caching • health checks</p>
-          <a class="btn" href="https://github.com/YOUR_GITHUB/ulb-dashboard-api">🔗 View Code</a>
+          <p>Dynamic child-DB selection by <em>AppId</em>, Repository Pattern, EF Core + <code>FromSqlRaw</code>, Swagger docs.</p>
+          <a class="btn" href="https://github.com/YOUR_GITHUB/ulb-dashboard-api">Code ↗</a>
         </article>
         <article class="card">
           <h3>Attendance Summary (SP)</h3>
-          <p>Stored Procedure that consolidates scan times, collection counts, and idle-time metrics.</p>
-          <a class="btn" href="https://github.com/YOUR_GITHUB/employee-summary-sp">🔗 View Code</a>
+          <p>Stored procedure consolidating scan times, collection counts, and idle-time metrics for employee summaries.</p>
+          <a class="btn" href="https://github.com/YOUR_GITHUB/employee-summary-sp">Code ↗</a>
         </article>
         <article class="card">
           <h3>Garbage Collection Insights</h3>
-          <p>API + SQL queries to detect duplicate SSId records with filters and export features.</p>
-          <a class="btn" href="https://github.com/YOUR_GITHUB/gc-insights">🔗 View Code</a>
+          <p>API + queries to detect duplicate SSId records with filters by date/type; exports and charts.</p>
+          <a class="btn" href="https://github.com/YOUR_GITHUB/gc-insights">Code ↗</a>
         </article>
       </div>
     </section>
 
-    <!-- Skills -->
     <section id="skills" class="skills">
       <h2>Skills</h2>
-      <div style="text-align:center">
+      <div>
         <span>C# / .NET 6+</span><span>ASP.NET Core Web API</span><span>EF Core</span>
-        <span>LINQ</span><span>SQL Server</span><span>ASP.NET Framework</span><span>REST API</span>
-        <span>JWT Auth</span><span>Git / GitHub</span><span>Azure Basics</span>
-        <span>Postman</span><span>Swagger</span>
+        <span>LINQ</span><span>SQL Server / SPs</span><span>REST</span><span>JWT</span>
+        <span>Git/GitHub</span><span>Azure basics</span><span>Postman/Swagger</span>
       </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact">
       <h2>Contact</h2>
-      <p>📧 <a href="mailto:nbarapatre06@gmail.com">nbarapatre06@gmail.com</a> • 📍 Nagpur, India</p>
+      <p>Email: <a href="mailto:nbarapatre06@gmail.com">nbarapatre06@gmail.com</a> • Nagpur, IN</p>
     </section>
 
-    <!-- Footer -->
-    <footer>© <span id="y"></span> Nikhil Barapatre. Built with ❤️ using HTML & CSS.</footer>
+    <footer>© <span id="y"></span> Nikhil. Built with HTML & CSS.</footer>
   </div>
-
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
