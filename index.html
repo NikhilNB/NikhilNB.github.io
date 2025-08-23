@@ -3,29 +3,81 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NIKHIL BARAPATRE • .NET Developer Portfolio</title>
+  <title>Nikhil Barapatre • .NET Developer Portfolio</title>
   <meta name="description" content=".NET developer (1.6 years). ASP.NET Core, EF Core, SQL, Web APIs." />
   <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root { --bg:#0b1220; --card:#121a2b; --text:#e7ecf4; --muted:#9fb0d1; --accent:#84d0ff; }
-    *{box-sizing:border-box} body{margin:0;font-family:system-ui,Segoe UI,Roboto,Inter,Arial;background:var(--bg);color:var(--text)}
-    .wrap{max-width:1024px;margin:0 auto;padding:24px}
-    header{display:flex;justify-content:space-between;align-items:center;gap:16px}
-    nav a{color:var(--muted);text-decoration:none;margin:0 8px} nav a:hover{color:var(--accent)}
-    .hero{padding:56px 0}
-    h1{font-size:40px;margin:0 0 8px} h2{margin-top:40px}
-    .pill{display:inline-block;background:rgba(132,208,255,.12);border:1px solid rgba(132,208,255,.35);color:var(--accent);padding:6px 10px;border-radius:999px;font-size:12px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-    .card{background:var(--card);border:1px solid #1e2940;border-radius:16px;padding:16px}
-    .card h3{margin:0 0 8px}
-    .skills span{display:inline-block;margin:6px 6px 0 0;padding:6px 10px;border-radius:999px;background:#0e1730;color:#cfe3ff;border:1px solid #203258;font-size:12px}
-    footer{margin:56px 0 16px;color:var(--muted);font-size:14px}
-    a.btn{display:inline-block;margin-top:10px;padding:8px 12px;border:1px solid #28406a;border-radius:10px;color:#cfe3ff;text-decoration:none}
-    a.btn:hover{border-color:#84d0ff;color:#84d0ff}
+    :root {
+      --bg: linear-gradient(135deg, #0b1220, #121a2b);
+      --card: #151f33;
+      --text: #e7ecf4;
+      --muted: #9fb0d1;
+      --accent: #3ab4ff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Inter', sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    
+    /* Header */
+    header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0}
+    header strong{font-size:20px}
+    nav a{color:var(--muted);text-decoration:none;margin:0 10px;font-weight:500;transition:.2s}
+    nav a:hover{color:var(--accent)}
+    
+    /* Hero */
+    .hero{padding:80px 0;text-align:center}
+    .hero h1{font-size:48px;margin:16px 0;font-weight:700}
+    .hero p{max-width:650px;margin:0 auto;color:var(--muted)}
+    .pill{display:inline-block;background:rgba(58,180,255,.1);border:1px solid rgba(58,180,255,.35);
+      color:var(--accent);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600}
+    
+    a.btn{
+      display:inline-block;margin-top:20px;padding:12px 20px;
+      border:1px solid #28406a;border-radius:10px;
+      color:var(--text);text-decoration:none;font-weight:600;transition:.3s
+    }
+    a.btn:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+    
+    /* Section */
+    section{margin:80px 0}
+    h2{text-align:center;font-size:28px;margin-bottom:32px;font-weight:700}
+    
+    /* Projects Grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+    .card{
+      background:var(--card);
+      border:1px solid #1e2940;
+      border-radius:16px;
+      padding:20px;
+      transition:.3s;
+    }
+    .card:hover{transform:translateY(-5px);border-color:var(--accent)}
+    .card h3{margin:0 0 12px;font-size:20px}
+    .card p{color:var(--muted);font-size:15px}
+    
+    /* Skills */
+    .skills span{
+      display:inline-block;margin:6px;padding:8px 14px;border-radius:999px;
+      background:#0e1730;color:#cfe3ff;border:1px solid #203258;font-size:13px
+    }
+    
+    /* Contact */
+    #contact p{text-align:center;font-size:16px}
+    
+    /* Footer */
+    footer{text-align:center;margin:56px 0 16px;color:var(--muted);font-size:14px}
   </style>
 </head>
 <body>
   <div class="wrap">
+    <!-- Header -->
     <header>
       <div><strong>Nikhil Barapatre</strong> • .NET Developer</div>
       <nav>
@@ -33,56 +85,64 @@
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
         <a href="Nikhil_Barapatre_NET_Resume.pdf">Resume</a>
-        <a href="https://github.com/NikhilNB" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/nikhil-barapatre-26672b250" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/NikhilNB" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/nikhil-barapatre-26672b250" target="_blank">LinkedIn</a>
       </nav>
     </header>
 
+    <!-- Hero -->
     <section class="hero">
       <span class="pill">ASP.NET Core • EF Core • SQL</span>
-      <h1>Building clean Web APIs & data-driven features.</h1>
-      <p>I’m a .NET developer (1.6 years) focused on ASP.NET Core Web API, EF Core, and performance-friendly SQL. Recently: multi-tenant DB routing by AppId, SP-driven analytics, and API-first refactors.</p>
-      <a class="btn" href="#projects">See my work ↓</a>
+      <h1>Building scalable Web APIs & data-driven solutions</h1>
+      <p>I’m a .NET developer (1.6 years) skilled in ASP.NET Core, EF Core, and SQL Server.  
+      Focused on designing clean APIs, optimizing database queries, and implementing real-world solutions.</p>
+      <a class="btn" href="#projects">🚀 See My Work</a>
     </section>
 
+    <!-- Projects -->
     <section id="projects">
       <h2>Featured Projects</h2>
       <div class="grid">
         <article class="card">
           <h3>ULB Dashboard API</h3>
-          <p>Dynamic child-DB selection by <em>AppId</em>, Repository Pattern, EF Core + <code>FromSqlRaw</code>, Swagger docs.</p>
+          <p>Multi-tenant DB routing with Repository Pattern, EF Core + FromSqlRaw, Swagger docs.</p>
           <p><strong>Highlights:</strong> JWT auth • caching • health checks</p>
-          <a class="btn" href="https://github.com/YOUR_GITHUB/ulb-dashboard-api">Code ↗</a>
+          <a class="btn" href="https://github.com/YOUR_GITHUB/ulb-dashboard-api">🔗 View Code</a>
         </article>
         <article class="card">
           <h3>Attendance Summary (SP)</h3>
-          <p>SP consolidating scan times, collection counts, and idle-time metrics for user-day summaries.</p>
-          <a class="btn" href="https://github.com/YOUR_GITHUB/employee-summary-sp">Code ↗</a>
+          <p>Stored Procedure that consolidates scan times, collection counts, and idle-time metrics.</p>
+          <a class="btn" href="https://github.com/YOUR_GITHUB/employee-summary-sp">🔗 View Code</a>
         </article>
         <article class="card">
           <h3>Garbage Collection Insights</h3>
-          <p>API + queries to detect duplicate SSId records with filters by date/type; exports and charts.</p>
-          <a class="btn" href="https://github.com/YOUR_GITHUB/gc-insights">Code ↗</a>
+          <p>API + SQL queries to detect duplicate SSId records with filters and export features.</p>
+          <a class="btn" href="https://github.com/YOUR_GITHUB/gc-insights">🔗 View Code</a>
         </article>
       </div>
     </section>
 
+    <!-- Skills -->
     <section id="skills" class="skills">
       <h2>Skills</h2>
-      <div>
+      <div style="text-align:center">
         <span>C# / .NET 6+</span><span>ASP.NET Core Web API</span><span>EF Core</span>
-        <span>LINQ</span><span>SQL Server / SPs</span><span>REST</span><span>JWT</span>
-        <span>Git/GitHub</span><span>Azure basics</span><span>Postman/Swagger</span>
+        <span>LINQ</span><span>SQL Server</span><span>Stored Procedures</span><span>REST</span>
+        <span>JWT Auth</span><span>Git / GitHub</span><span>Azure Basics</span>
+        <span>Postman</span><span>Swagger</span>
       </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:nbarapatre06@gmail.com">nbarapatre06@gmail.com</a> • Nagpur, IN</p>
+      <p>📧 <a href="mailto:nbarapatre06@gmail.com">nbarapatre06@gmail.com</a> • 📍 Nagpur, India</p>
     </section>
 
-    <footer>© <span id="y"></span> Nikhil. Built with vanilla HTML/CSS. </footer>
+    <!-- Footer -->
+    <footer>© <span id="y"></span> Nikhil Barapatre. Built with ❤️ using HTML & CSS.</footer>
   </div>
+
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
