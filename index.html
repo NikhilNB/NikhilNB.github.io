@@ -4,68 +4,117 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NIKHIL BARAPATRE • .NET Developer Portfolio</title>
-  <meta name="description" content=".NET developer (1.6 years). ASP.NET Core, EF Core, SQL, Web APIs." />
+  <meta name="description" content=".NET Developer with 1.6 years of experience. Specializing in ASP.NET Core, EF Core, SQL Server, and REST APIs." />
   <link rel="icon" href="favicon.ico" />
   <style>
   :root { 
     --bg: #0d1117; 
-    --gradient: linear-gradient(135deg, #00c6ff, #0072ff);
+    --gradient: linear-gradient(135deg, #2563eb, #06b6d4);
     --card: #161b22; 
     --card-border: #30363d;
     --text: #e6edf3; 
     --muted: #8b949e; 
-    --accent: #58a6ff;
+    --accent: #3b82f6;
   }
-  *{box-sizing:border-box}
+  *{box-sizing:border-box;margin:0;padding:0}
   body{
-    margin:0;
     font-family:Inter,Segoe UI,Roboto,Arial;
     background:var(--bg);
     color:var(--text);
-    background-image: radial-gradient(circle at top left, rgba(0,198,255,0.15) 0%, transparent 60%), 
-                      radial-gradient(circle at bottom right, rgba(0,114,255,0.15) 0%, transparent 70%);
+    line-height:1.6;
+    background-image: radial-gradient(circle at top left, rgba(37,99,235,0.1) 0%, transparent 60%), 
+                      radial-gradient(circle at bottom right, rgba(6,182,212,0.1) 0%, transparent 70%);
     background-attachment: fixed;
   }
   .wrap{max-width:1150px;margin:0 auto;padding:28px}
-  header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0}
-  header strong{font-size:18px;color:#fff}
-  nav a{color:var(--muted);text-decoration:none;margin:0 12px;font-weight:500;position:relative}
+  header{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+  header strong{font-size:20px;color:#fff;letter-spacing:.5px}
+  nav a{
+    color:var(--muted);
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:500;
+    position:relative;
+    transition:.3s;
+  }
   nav a:hover{color:var(--accent)}
   nav a::after{
     content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;
     background:var(--gradient);transition:.3s;
   }
   nav a:hover::after{width:100%}
-  .hero{padding:80px 0;text-align:center}
-  h1{font-size:46px;margin:0 0 14px;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-  h2{margin-top:70px;font-size:30px;color:var(--accent);text-align:center}
-  .pill{display:inline-block;background:rgba(88,166,255,.15);border:1px solid rgba(88,166,255,.4);color:var(--accent);padding:7px 14px;border-radius:999px;font-size:14px;margin-bottom:22px}
-  .hero img{max-width:200px;margin:28px auto;display:block;filter:drop-shadow(0 0 12px rgba(0,114,255,.5))}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:24px;margin-top:28px}
+  .hero{text-align:center;padding:90px 20px}
+  .pill{
+    display:inline-block;
+    background:rgba(59,130,246,.15);
+    border:1px solid rgba(59,130,246,.4);
+    color:var(--accent);
+    padding:7px 16px;
+    border-radius:999px;
+    font-size:14px;
+    margin-bottom:22px;
+  }
+  h1{
+    font-size:48px;
+    margin:0 0 18px;
+    background:var(--gradient);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+  h2{
+    margin-top:80px;
+    font-size:30px;
+    color:var(--accent);
+    text-align:center;
+  }
+  .hero p{max-width:720px;margin:0 auto 28px;color:var(--muted)}
+  .hero img{max-width:180px;margin:32px auto;display:block;filter:drop-shadow(0 0 14px rgba(37,99,235,.5))}
+  a.btn{
+    display:inline-block;
+    margin-top:14px;
+    padding:12px 20px;
+    border-radius:12px;
+    font-weight:500;
+    color:#fff;
+    text-decoration:none;
+    background:var(--gradient);
+    transition:.3s;
+  }
+  a.btn:hover{opacity:.9}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:26px;margin-top:34px}
   .card{
     background:var(--card);
     border:1px solid var(--card-border);
     border-radius:18px;
-    padding:22px;
-    box-shadow:0 6px 16px rgba(0,0,0,0.6);
+    padding:24px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.5);
     transition:transform .25s, box-shadow .25s;
   }
-  .card:hover{transform:translateY(-6px);box-shadow:0 12px 24px rgba(0,0,0,0.7)}
+  .card:hover{transform:translateY(-6px);box-shadow:0 14px 28px rgba(0,0,0,0.6)}
   .card h3{margin:0 0 12px;color:var(--accent)}
-  .skills{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px}
-  .skills-group h4{color:#58a6ff;margin-bottom:10px}
-  .skills span{display:inline-block;margin:6px 6px 0 0;padding:6px 12px;border-radius:999px;background:#21262d;color:#e6edf3;border:1px solid #30363d;font-size:13px}
-  footer{margin:60px 0 16px;color:var(--muted);font-size:14px;text-align:center}
-  a.btn{display:inline-block;margin-top:14px;padding:12px 18px;border:1px solid #30363d;border-radius:12px;color:#fff;text-decoration:none;transition:.3s;background:rgba(88,166,255,.08)}
-  a.btn:hover{border-color:#58a6ff;color:#fff;background:var(--gradient)}
-  .socials a{margin:0 8px;color:var(--muted);font-size:18px;text-decoration:none}
-  .socials a:hover{color:var(--accent)}
+  .card p{color:var(--muted);font-size:15px}
+  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;margin-top:30px}
+  .skills-group h4{color:var(--accent);margin-bottom:12px;font-size:17px}
+  .skills span{
+    display:inline-block;
+    margin:6px 6px 0 0;
+    padding:6px 12px;
+    border-radius:999px;
+    background:#21262d;
+    color:#e6edf3;
+    border:1px solid #30363d;
+    font-size:13px;
+  }
   .timeline{margin-top:40px;max-width:800px;margin-left:auto;margin-right:auto}
-  .timeline-item{margin-bottom:30px;border-left:2px solid var(--accent);padding-left:16px;position:relative}
-  .timeline-item::before{content:"";position:absolute;left:-8px;top:5px;width:12px;height:12px;background:var(--accent);border-radius:50%}
-  .timeline-item h4{margin:0 0 6px;color:#fff}
-  .timeline-item p{margin:0;font-size:14px;color:var(--muted)}
-</style>
+  .timeline-item{margin-bottom:34px;border-left:2px solid var(--accent);padding-left:18px;position:relative}
+  .timeline-item::before{content:"";position:absolute;left:-9px;top:6px;width:14px;height:14px;background:var(--accent);border-radius:50%}
+  .timeline-item h4{margin:0 0 6px;color:#fff;font-size:18px}
+  .timeline-item p{margin:0 0 6px;font-size:14px;color:var(--muted)}
+  .timeline-item ul{margin:6px 0 0 18px;padding:0;color:var(--muted);font-size:14px}
+  footer{margin:70px 0 20px;color:var(--muted);font-size:14px;text-align:center}
+  .socials a{margin:0 10px;color:var(--muted);font-size:16px;text-decoration:none;transition:.3s}
+  .socials a:hover{color:var(--accent)}
+  </style>
 </head>
 <body>
   <div class="wrap">
@@ -84,49 +133,50 @@
 
     <section class="hero">
       <span class="pill">ASP.NET Core • EF Core • SQL</span>
-      <h1>Building clean Web APIs & scalable backend systems</h1>
-      <p>.NET Developer (1.6 years) — delivering optimized SQL, repository-driven APIs, and robust enterprise features.</p>
+      <h1>Designing Clean APIs & Scalable Backend Systems</h1>
+      <p>.NET Developer (1.6 years) — Experienced in enterprise APIs, database optimization, and scalable backend solutions with ASP.NET Core & EF Core.</p>
       <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg" alt=".NET Logo">
-      <a class="btn" href="#projects">See my work ↓</a>
+      <a class="btn" href="#projects">Explore My Work ↓</a>
     </section>
 
     <section id="projects">
       <h2>Featured Projects</h2>
       <div class="grid">
         <article class="card">
-          <h3>ULB Dashboard API</h3>
-          <p>Dynamic multi-database selection by <em>AppId</em>, Repository Pattern, EF Core + <code>FromSqlRaw</code>, Swagger docs.</p>
-          <p><strong>Highlights:</strong> JWT auth • caching • health checks</p>
+          <h3>ICT-Based Waste Monitoring Technology</h3>
+          <p>A smart municipal waste management system across multiple ULBs, enabling digitized operations, live dashboards, and real-time decision-making.</p>
+          <p><strong>Impact:</strong> Improved efficiency, transparency & citizen satisfaction.</p>
         </article>
         <article class="card">
-          <h3>Attendance Summary (SP)</h3>
-          <p>Stored procedure consolidating scan times, collection counts, idle-time metrics for user-day summaries.</p>
-          <p><strong>Impact:</strong> Reduced execution time from minutes to seconds.</p>
+          <h3>Attendance Summary (SQL SP)</h3>
+          <p>Stored procedure for consolidating scan times, counts, and idle-time metrics into daily summaries.</p>
+          <p><strong>Result:</strong> Reduced execution time from minutes to seconds.</p>
         </article>
         <article class="card">
           <h3>Garbage Collection Insights</h3>
-          <p>API + queries to detect duplicate SSId records with filters by date/type; exports and charts for analytics.</p>
+          <p>Data-driven API to detect duplicate SSId records with filters, reporting, and export-ready analytics.</p>
+          <p><strong>Outcome:</strong> Enhanced monitoring and reduced data redundancy.</p>
         </article>
       </div>
     </section>
 
     <section id="skills">
-  <h2>Skills</h2>
-  <div class="skills">
-    <div class="skills-group">
-      <h4>Backend</h4>
-      <span>C# / .NET 6+</span><span>ASP.NET Core Web API</span><span>EF Core</span><span>LINQ</span>
-    </div>
-    <div class="skills-group">
-      <h4>Database & Tools</h4>
-      <span>SQL Server</span><span>REST API</span><span>JWT</span><span>Git/GitHub</span><span>Postman/Swagger</span><span>Azure basics</span>
-    </div>
-    <div class="skills-group">
-      <h4>Frontend</h4>
-      <span>HTML</span><span>CSS</span><span>Bootstrap</span><span>jQuery</span>
-    </div>
-  </div>
-</section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skills-group">
+          <h4>Backend</h4>
+          <span>C# / .NET 6+</span><span>ASP.NET Core Web API</span><span>EF Core</span><span>LINQ</span>
+        </div>
+        <div class="skills-group">
+          <h4>Database & Tools</h4>
+          <span>SQL Server</span><span>Stored Procedures</span><span>REST API</span><span>JWT</span><span>Postman</span><span>Swagger</span><span>Azure Basics</span>
+        </div>
+        <div class="skills-group">
+          <h4>Frontend</h4>
+          <span>HTML</span><span>CSS</span><span>Bootstrap</span><span>jQuery</span>
+        </div>
+      </div>
+    </section>
 
     <section id="experience">
       <h2>Experience</h2>
@@ -134,7 +184,12 @@
         <div class="timeline-item">
           <h4>.NET Developer — Big V Telecom Pvt Ltd</h4>
           <p>Feb 2024 – Present • Nagpur, IN</p>
-          <p>Worked on converting legacy Asp.Net Framework MVC methods into modern  Core Web APIs, implemented repository pattern, optimized stored procedures, and developed dashboards with child DB switching.</p>
+          <ul>
+            <li>Migrated legacy ASP.NET MVC methods into modern .NET Core Web APIs.</li>
+            <li>Implemented repository pattern & optimized stored procedures.</li>
+            <li>Developed dashboards with dynamic child-DB switching.</li>
+            <li>Improved API performance with caching & health checks.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -143,12 +198,12 @@
       <h2>Contact</h2>
       <p>Email: <a href="mailto:nbarapatre06@gmail.com">nbarapatre06@gmail.com</a> • Nagpur, IN</p>
       <div class="socials">
-        <a href="https://github.com/NikhilNB" target="_blank">GitHub</a> |
+        <a href="https://github.com/NikhilNB" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/nikhil-barapatre-26672b250" target="_blank">LinkedIn</a>
       </div>
     </section>
 
-    <footer>© <span id="y"></span> Nikhil. Built with passion using HTML & CSS.</footer>
+    <footer>© <span id="y"></span> Nikhil Barapatre • Crafted with HTML & CSS</footer>
   </div>
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
